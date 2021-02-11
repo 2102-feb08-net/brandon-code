@@ -2,7 +2,7 @@ using System;
 
 namespace rockpaperscissors
 {
-    class Player
+    public class Player
     {
         public string Name { get; }
 
@@ -19,7 +19,7 @@ namespace rockpaperscissors
                     Rock, Paper, Scissors
                     R, P, S
             */
-            Move move = Move.None;
+            Move? move = null;
 
             do
             {
@@ -42,9 +42,9 @@ namespace rockpaperscissors
                 {
                     Console.WriteLine("Input unacceptable! Please enter one of the following: Rock, Paper, Scissors");
                 }
-            } while (move == Move.None);
+            } while (move == null);
             
-            return move;
+            return move.Value;
         }
     }
 }

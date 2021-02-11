@@ -12,7 +12,7 @@ Console.ReadLine()
 
 namespace rockpaperscissors
 {
-    class Game
+    public class Game
     {
         private List<RoundResult> history;
         private Player player;
@@ -96,16 +96,15 @@ namespace rockpaperscissors
     }
 
     // Utility Enum for tracking moves
-    enum Move
+    public enum Move
     {
         Rock,
         Paper,
-        Scissors,
-        None
+        Scissors
     }
 
     // Utility Enum for tracking results
-    enum Result
+    public enum Result
     {
         Win,
         Lose,

@@ -2,7 +2,7 @@
 
 namespace rockpaperscissors
 {
-    class RoundResult
+    public class RoundResult
     {
         public Move PlayerMove { get; }
         public Move ComputerMove { get; }
