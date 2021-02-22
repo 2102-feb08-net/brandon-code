@@ -1,0 +1,82 @@
+info: 2/19/2021 13:07:22.918 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'ChinookContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 2/19/2021 13:07:24.225 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (101ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [t0].[TrackId], [t0].[AlbumId], [t0].[Bytes], [t0].[Composer], [t0].[GenreId], [t0].[MediaTypeId], [t0].[Milliseconds], [t0].[Name], [t0].[UnitPrice], [g].[GenreId], [g].[Name], [a].[AlbumId], [a].[ArtistId], [a].[Title]
+      FROM (
+          SELECT TOP(@__p_0) [t].[TrackId], [t].[AlbumId], [t].[Bytes], [t].[Composer], [t].[GenreId], [t].[MediaTypeId], [t].[Milliseconds], [t].[Name], [t].[UnitPrice]
+          FROM [Track] AS [t]
+          ORDER BY [t].[Name]
+      ) AS [t0]
+      LEFT JOIN [Genre] AS [g] ON [t0].[GenreId] = [g].[GenreId]
+      LEFT JOIN [Album] AS [a] ON [t0].[AlbumId] = [a].[AlbumId]
+      ORDER BY [t0].[Name]
+info: 2/19/2021 13:07:24.429 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (48ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [t0].[TrackId], [t0].[AlbumId], [t0].[Bytes], [t0].[Composer], [t0].[GenreId], [t0].[MediaTypeId], [t0].[Milliseconds], [t0].[Name], [t0].[UnitPrice]
+      FROM (
+          SELECT TOP(@__p_0) [t].[TrackId], [t].[AlbumId], [t].[Bytes], [t].[Composer], [t].[GenreId], [t].[MediaTypeId], [t].[Milliseconds], [t].[Name], [t].[UnitPrice]
+          FROM [Track] AS [t]
+          ORDER BY [t].[Name]
+      ) AS [t0]
+      ORDER BY [t0].[Name]
+info: 2/19/2021 13:07:24.637 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (45ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 200)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Track] SET [Name] = @p0
+      WHERE [TrackId] = @p1;
+      SELECT @@ROWCOUNT;
+info: 2/19/2021 13:07:24.769 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (54ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [t0].[TrackId], [t0].[AlbumId], [t0].[Bytes], [t0].[Composer], [t0].[GenreId], [t0].[MediaTypeId], [t0].[Milliseconds], [t0].[Name], [t0].[UnitPrice], [g].[GenreId], [g].[Name], [a].[AlbumId], [a].[ArtistId], [a].[Title]
+      FROM (
+          SELECT TOP(@__p_0) [t].[TrackId], [t].[AlbumId], [t].[Bytes], [t].[Composer], [t].[GenreId], [t].[MediaTypeId], [t].[Milliseconds], [t].[Name], [t].[UnitPrice]
+          FROM [Track] AS [t]
+          ORDER BY [t].[Name]
+      ) AS [t0]
+      LEFT JOIN [Genre] AS [g] ON [t0].[GenreId] = [g].[GenreId]
+      LEFT JOIN [Album] AS [a] ON [t0].[AlbumId] = [a].[AlbumId]
+      ORDER BY [t0].[Name]
+info: 2/19/2021 13:07:24.821 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [t].[TrackId], [t].[AlbumId], [t].[Bytes], [t].[Composer], [t].[GenreId], [t].[MediaTypeId], [t].[Milliseconds], [t].[Name], [t].[UnitPrice]
+      FROM [Track] AS [t]
+      ORDER BY [t].[TrackId] DESC
+info: 2/19/2021 13:07:24.940 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (47ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 220), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (Size = 200), @p8='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Track] ([TrackId], [AlbumId], [Bytes], [Composer], [GenreId], [MediaTypeId], [Milliseconds], [Name], [UnitPrice])
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+info: 2/19/2021 13:07:25.043 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (53ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [t0].[TrackId], [t0].[AlbumId], [t0].[Bytes], [t0].[Composer], [t0].[GenreId], [t0].[MediaTypeId], [t0].[Milliseconds], [t0].[Name], [t0].[UnitPrice], [g].[GenreId], [g].[Name], [a].[AlbumId], [a].[ArtistId], [a].[Title]
+      FROM (
+          SELECT TOP(@__p_0) [t].[TrackId], [t].[AlbumId], [t].[Bytes], [t].[Composer], [t].[GenreId], [t].[MediaTypeId], [t].[Milliseconds], [t].[Name], [t].[UnitPrice]
+          FROM [Track] AS [t]
+          ORDER BY [t].[Name]
+      ) AS [t0]
+      LEFT JOIN [Genre] AS [g] ON [t0].[GenreId] = [g].[GenreId]
+      LEFT JOIN [Album] AS [a] ON [t0].[AlbumId] = [a].[AlbumId]
+      ORDER BY [t0].[Name]
+info: 2/19/2021 13:07:25.099 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [t].[TrackId], [t].[AlbumId], [t].[Bytes], [t].[Composer], [t].[GenreId], [t].[MediaTypeId], [t].[Milliseconds], [t].[Name], [t].[UnitPrice]
+      FROM [Track] AS [t]
+      WHERE [t].[Name] = N'"1. This Track Is A New Track"'
+info: 2/19/2021 13:07:25.197 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (44ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      DELETE FROM [Track]
+      WHERE [TrackId] = @p0;
+      SELECT @@ROWCOUNT;
+info: 2/19/2021 13:07:25.302 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (48ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [t0].[TrackId], [t0].[AlbumId], [t0].[Bytes], [t0].[Composer], [t0].[GenreId], [t0].[MediaTypeId], [t0].[Milliseconds], [t0].[Name], [t0].[UnitPrice], [g].[GenreId], [g].[Name], [a].[AlbumId], [a].[ArtistId], [a].[Title]
+      FROM (
+          SELECT TOP(@__p_0) [t].[TrackId], [t].[AlbumId], [t].[Bytes], [t].[Composer], [t].[GenreId], [t].[MediaTypeId], [t].[Milliseconds], [t].[Name], [t].[UnitPrice]
+          FROM [Track] AS [t]
+          ORDER BY [t].[Name]
+      ) AS [t0]
+      LEFT JOIN [Genre] AS [g] ON [t0].[GenreId] = [g].[GenreId]
+      LEFT JOIN [Album] AS [a] ON [t0].[AlbumId] = [a].[AlbumId]
+      ORDER BY [t0].[Name]
